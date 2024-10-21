@@ -333,7 +333,7 @@ ol {
 }
 
 .footer {
-    min-height: 125px;
+    min-height: 170px;
     width: 100%;
     background-color: black;
 }
@@ -356,6 +356,18 @@ ol {
     justify-content: center;
     align-items: center;
     padding-top: 5px;
+}
+
+.footer_warning {
+    font-family: 'NotCourierSans', sans-serif;
+    font-size: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
 
 /* if shrinks page, show products as a single column*/
