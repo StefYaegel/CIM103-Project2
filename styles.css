@@ -1,0 +1,369 @@
+/* downloaded custom font into project folder to match website font (ncs) */
+@font-face {
+    font-family: 'NotCourierSans';
+    src: url('notcouriersans/NotCourierSans-Bold.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal; 
+}
+
+/* album cover = background image behind header */
+.behind_header {
+    background-image: url(albumcover.jpeg);
+    background-size: cover;
+    background-position: center; 
+    margin: 0;
+    height: 100vh;
+}
+
+/* header contains the top menu */
+.header {
+    position: fixed;
+    width: 100%;
+    margin-top: -25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    z-index: 1;
+}
+
+/* left and right items in the header */
+.left_aligned_items, .right_aligned_items {
+    padding: 30px;
+}
+
+/* ncs font for header buttons */
+.ncs_font {
+    font-family: 'NotCourierSans', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+/* ncs font for headings */
+.ncs_font_heading {
+    font-family: 'NotCourierSans', sans-serif;
+    font-size: 40px;
+    color: white;
+}
+
+/* "available now" text in header */
+.ncs_font_text {
+    font-family: 'NotCourierSans', sans-serif;
+    font-size: 23px;
+    color: white;
+    margin-top: -12px;
+}
+
+
+/* container for album name, subtitle, and download button */
+.album_available_download {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 220px;
+    margin-left: 40%;
+}
+
+/* album title image */
+.eternal_sunshine_title {
+    height: 60%;
+    width: 60%;
+}
+
+/* stream/download button underneath header */
+.stream_button {
+    z-index: 1;
+    background: rgb(250, 241, 241);
+    width: 185px;
+    height: 50px;
+    border-radius: 10px;
+    font-family: 'NotCourierSans', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 10px;
+    border-style: none;
+    cursor: pointer;
+    transition: all 0.5s;
+    margin-right: 25px;
+}
+
+#buy_button {
+    z-index: 1;
+    position: absolute;
+    background: rgb(250, 241, 241);
+    width: 185px;
+    height: 50px;
+    border-radius: 10px;
+    font-family: 'NotCourierSans', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 10px;
+    border-style: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+/* on hover, the button smoothly changes color */
+.stream_button:hover {
+    background: rgb(255, 255, 255);
+}
+
+.ncs_font_products {
+    font-family: 'NotCourierSans', sans-serif;
+    font-size: 20px;
+    color: white;     
+    width: 80%;
+    text-align: center;
+    line-height: 25px;
+}
+
+.ncs_font_price {
+    font-family: 'NotCourierSans', sans-serif;
+    font-size: 17px;
+    color: white;     
+    width: 70%;
+    text-align: center;
+}
+
+/* contains the image, image border, product name, product price */
+.product {
+    width: 900px;
+    height: 525px;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: content;
+    align-items: center;
+    margin: 0 -30px;
+}
+
+/* contains the product image */
+.product img {
+    width: 80%; 
+    height: auto;
+}
+
+/* contains the product image border*/
+.product_border{
+    position: relative;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    text-align: center;
+    transition: .3s ease-in-out all;
+}
+
+.product_border:hover {
+    background: rgba(0, 0, 0, .5);
+}
+
+
+/* buy button in center of the product image */
+/* also transitions in like a fade */
+.product_border a {
+    opacity: 0;
+    position: absolute; 
+    top: 40%;
+    left: 20%;
+    transition: .3s ease-in-out all;
+}
+
+/* hover over border of the product should reveal button */
+.product_border:hover a {
+    opacity: 1;
+}
+
+
+/* artist title center of header */
+#title {
+    width: 16%;
+    height: 14%;
+    position: relative;
+    left: 22%;
+}
+
+/* social media icons position */
+.socials {
+    position: absolute;
+    right: -60px;
+    width: 400px;
+}
+
+.socials_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+/* links to social media, store button, subscribe button */
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+/* underlining header items with after to control line length*/
+.left_aligned_items a, .ncs_font_shop_all {
+    position: relative; 
+}
+
+/* underline made using after */
+.left_aligned_items a::after, .ncs_font_shop_all::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px; 
+    width: 0; 
+    background: white; 
+    transition: width 0.3s ease-in-out; 
+}
+
+/* after line becomes fully visible on hover */
+.left_aligned_items a:hover::after, .ncs_font_shop_all:hover::after {
+    width: 100%; 
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: url('background.jpg');
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+}
+
+/* main content inside body (store, tracklist, videos) */
+main {
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+/* product rows */
+.first_product_row, .second_product_row {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-right: 100px;
+}
+
+
+/* shop all button below product list */
+.ncs_font_shop_all {
+    font-family: 'NotCourierSans', sans-serif;
+    font-size: 15px;
+    color: white;  
+    margin-left: 85%;
+}
+
+/* list of songs in the album */
+ol {
+    color: white;
+    font-size: 18px;
+    font-family: 'NotCourierSans', sans-serif;
+    margin-left: 1%;
+    line-height: 30px;
+}
+
+/* music videos container */
+.videos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    margin-left: -50px;
+}
+
+.video_img {
+    height: 75vh;
+    width: 170vh;
+}
+
+.ncs_font_latest {
+    font-family: 'NotCourierSans', sans-serif;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    line-height: 7px;
+}
+
+.ncs_font_video_title {
+    font-family: 'NotCourierSans', sans-serif;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    line-height: 7px;
+}
+
+.video_with_title {
+    position: relative;
+}
+
+.video_img_src {
+    width: 80vw; 
+    height: auto;
+}
+
+#previous_arrow_button, #next_arrow_button {
+    all: unset;
+    width: 5vw;
+    height: 5vw;
+    /* border: 2px solid red; */
+    margin-top: 15%;
+}
+
+#left_arrow_img, #right_arrow_img {
+    width: 2vw;
+    height: 2vw;
+}
+
+.left_video_right {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-left: 25px;
+    padding-right: auto;
+}
+
+.footer {
+    min-height: 125px;
+    width: 100%;
+    background-color: black;
+}
+
+.ncs_font_footer {
+    font-family: 'NotCourierSans', sans-serif;
+    font-size: 14px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.footer_screen_reader {
+    font-family: 'NotCourierSans', sans-serif;
+    font-size: 6px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
+
+/* if shrinks page, show products as a single column*/
+/* @media (max-width: 600px){
+    .first_product_row, .second_product_row {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        margin-right: 100px;
+    }
+} */
